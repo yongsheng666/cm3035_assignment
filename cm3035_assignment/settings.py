@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-f$006surze)#*%1dxwddtknsgg1c1qebw4va4zc17$f9+y9d%n
 
 DEBUG = os.getenv("DEBUG", "True") == "True"
 
-ALLOWED_HOSTS = [h.strip() for h in os.getenv("ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")]
+ALLOWED_HOSTS = [h.strip() for h in os.getenv("ALLOWED_HOSTS", "127.0.0.1,localhost,cm3035assignment-production.up.railway.app").split(",")]
 
 
 # Application definition
