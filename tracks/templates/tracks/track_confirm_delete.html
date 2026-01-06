@@ -1,0 +1,15 @@
+{% extends "tracks/base.html" %}
+{% block title %}Delete{% endblock %}
+
+{% block content %}
+<h1 class="h3 mb-3">Delete Track</h1>
+
+<div class="card p-3">
+  <p>Delete <strong>{{ object.track_name }}</strong> by {{ object.artist_name }}?</p>
+  <form method="post">
+    {% csrf_token %}
+    <button class="btn btn-danger">Confirm delete</button>
+    <a class="btn btn-outline-secondary" href="{% url 'tracks-web-detail' object.pk %}">Cancel</a>
+  </form>
+</div>
+{% endblock %}

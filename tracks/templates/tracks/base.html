@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>{% block title %}Tracks{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body class="bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/tracks/">Spotify Tracks</a>
+    <div class="navbar-nav">
+      <a class="nav-link" href="/tracks/">Frontend</a>
+      <a class="nav-link" href="/api/tracks/">API</a>
+      <a class="nav-link" href="/api/tracks/insights/clean-hits/?min_popularity=80">Clean Hits</a>
+      <a class="nav-link" href="/api/tracks/insights/artist-albumtype-breakdown/?artist=drake">Artist Breakdown</a>
+      <a class="nav-link" href="/admin/">Admin</a>
+    </div>
+  </div>
+</nav>
+
+<main class="container py-4">
+  {% block content %}{% endblock %}
+</main>
+</body>
+</html>
